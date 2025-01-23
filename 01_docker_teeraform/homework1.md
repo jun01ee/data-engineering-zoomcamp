@@ -61,4 +61,7 @@ order by trip_distance desc
 ## Run query 'largest_tip.sql', return:
 "JFK Airport"	87.3
 
-# Answer: "JFK Airport" 
+# Answer: "JFK Airport"
+
+# Question 7
+# Answer: terraform init, terraform apply -auto-approve, terraform destroy 
