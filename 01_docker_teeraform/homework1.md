@@ -1,5 +1,6 @@
 # Question 1 
-(base) 23491378@dep66306 data-engineering-zoomcamp % docker run -it python:3.12.8 bash
+(base) data-engineering-zoomcamp % docker run -it python:3.12.8 bash
+
 root@6baf757ec3d2:/# pip --version
 pip 24.3.1
 
