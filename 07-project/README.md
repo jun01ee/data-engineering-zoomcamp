@@ -1,3 +1,13 @@
+## 📊 Project Overview
+
+This project aims to present the **bilateral trade records between the United States and Australia** over the past several years, with a focus on how recent **tariff policies** may have influenced trade dynamics. Specifically, it analyzes:
+
+- **U.S. exports to Australia**  
+- **Australian exports to the U.S.**
+
+The dataset spans from **2018 to 2023** and covers various **sections of products**, offering a comprehensive view of trade volume trends and shifts in product categories. The pipeline ingests, transforms, and stores this data for exploration and dashboard visualization.
+
+
 ## 🌍 Yearly Export Data Ingestion Pipeline
 
 This project implements a **yearly scheduled ETL pipeline** using **PySpark** and **Google Cloud Platform (GCP)** to process trade export data. The pipeline reads raw data from **GCS**, transforms it with **PySpark**, loads it into **BigQuery**, and visualizes it in **Looker Studio**.
@@ -40,13 +50,7 @@ JARs for GCS and BigQuery support are included in the runtime configuration.
 
 ## 📆 Workflow Scheduling
 
-### Option A: **Local Development with Kestra + Docker**
-
-- Kestra handles orchestration and scheduling using a YAML-defined workflow
-- Dockerized execution enables reproducibility on local machines
-- The pipeline is scheduled to run **once a year** (January 1st, 00:00 UTC)
-
-### Option B: **Production-Grade Orchestration with Dataproc + Cloud Scheduler**
+**Production-Grade Orchestration with Dataproc + Cloud Scheduler**
 
 - Uses **Dataproc Serverless** to run the Spark job without managing clusters
 - Scheduled via **Cloud Scheduler**
