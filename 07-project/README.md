@@ -1,4 +1,3 @@
-```markdown
 # Yearly Export Data Ingestion Project
 
 This project performs yearly ingestion of trade export data stored in Google Cloud Storage (GCS), processes it using PySpark, and writes the transformed output into Google BigQuery for analysis.
@@ -13,7 +12,6 @@ This project performs yearly ingestion of trade export data stored in Google Clo
 
 ## 📁 Project Structure
 
-```
 project/
 │
 ├── export_ingestion.py             # PySpark script for ETL
@@ -28,9 +26,7 @@ project/
 │   ├── submit_batch.py            # Cloud Function to trigger batch job
 │   └── requirements.txt           # Dependencies for Cloud Function
 └── README.md
-```
 
----
 
 ## ⚙️ Setup Instructions
 
@@ -54,7 +50,6 @@ gsutil cp export_ingestion.py gs://<your-bucket>/scripts/
 gsutil cp jars/*.jar gs://<your-bucket>/jars/
 ```
 
----
 
 ## 🚀 Submitting the Dataproc Batch Job
 
@@ -69,8 +64,6 @@ gcloud dataproc batches submit pyspark \
     --async \
     -- gs://<your-bucket>/scripts/export_ingestion.py
 ```
-
----
 
 ## ⏰ Automating with Scheduler
 
@@ -98,7 +91,6 @@ gcloud scheduler jobs create http yearly-export-ingestion \
     --region=<your-region>
 ```
 
----
 
 ## 🔐 Authentication
 
@@ -109,7 +101,6 @@ Make sure your Dataproc and BigQuery jobs are authenticated:
   - `Storage Object Viewer`
 - Your Cloud Function should use a service account with permission to submit Dataproc jobs.
 
----
 
 ## 📊 Output
 
@@ -121,15 +112,11 @@ Dataset: dezoomcamp_project_dataset
 Tables: dim_section, dim_HS2, fact_export_by_product
 ```
 
----
-
 ## 📌 Notes
 
 - Ensure your GCS paths are public or accessible via the configured service account.
 - Test jobs manually before scheduling them.
 - JARs must be hosted on GCS for Dataproc to access them properly.
-
----
 
 ## 🧼 Cleanup
 
@@ -142,14 +129,7 @@ gsutil rm -r gs://<your-bucket>/scripts/
 gsutil rm -r gs://<your-bucket>/jars/
 ```
 
----
 
 ## 📞 Contact
 
 For questions or improvements, feel free to open an issue or reach out!
-
-```
-
----
-
-Let me know if you'd like it personalized for GitHub (badges, links, etc.) or if you're hosting the Cloud Function code somewhere else!
