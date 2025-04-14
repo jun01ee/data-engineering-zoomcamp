@@ -24,3 +24,6 @@
 
 # Ignored vscode files
 .vscode/
+
+.jar
+.json
