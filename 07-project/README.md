@@ -50,7 +50,13 @@ JARs for GCS and BigQuery support are included in the runtime configuration.
 
 ## 📆 Workflow Scheduling
 
-**Production-Grade Orchestration with Dataproc + Cloud Scheduler**
+### Option A: **Local Development with Kestra + Docker**
+
+- Kestra handles orchestration and scheduling using a YAML-defined workflow
+- Dockerized execution enables reproducibility on local machines
+- The pipeline is scheduled to run **once a year** (January 1st, 00:00 UTC)
+
+### Option B: **Production-Grade Orchestration with Dataproc + Cloud Scheduler**
 
 - Uses **Dataproc Serverless** to run the Spark job without managing clusters
 - Scheduled via **Cloud Scheduler**
