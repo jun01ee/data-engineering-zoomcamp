@@ -1,7 +1,3 @@
-Sure! Here's a `README.md` file tailored for your project, which covers yearly scheduled PySpark data ingestion from GCS to BigQuery using Google Cloud Dataproc:
-
----
-
 ```markdown
 # Yearly Export Data Ingestion Project
 
@@ -14,7 +10,6 @@ This project performs yearly ingestion of trade export data stored in Google Clo
 - **Destination**: BigQuery tables
 - **Automation**: Scheduled annually using Google Cloud Scheduler + Cloud Functions
 
----
 
 ## 📁 Project Structure
 
