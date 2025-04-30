@@ -82,6 +82,3 @@ An interactive dashboard is built in **Looker Studio** to present trade statisti
 - Integrate GitHub Actions for CI/CD
 - Add pipeline monitoring with GCP tools
 
----
-
-Let me know if you'd like this turned into an actual `README.md` file or converted into another format like PDF.
