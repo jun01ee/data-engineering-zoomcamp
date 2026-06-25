@@ -1,93 +1,101 @@
-# data-engineering-zoomcamp
+# Data Engineering Zoomcamp
 
+## Overview
 
+This repository contains coursework and lab exercises for the Data Engineering Zoomcamp. It includes modules for containerization, workflow orchestration, data warehousing, analytics engineering with dbt, batch Spark processing, streaming with PyFlink, and a final Google Cloud project.
 
-## Getting started
+## Repository structure
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- `01_docker_teeraform/` - Docker, Terraform, SQL exercises, and ingestion notebooks.
+- `02-workflow-orchestration/` - Workflow definitions and orchestration examples.
+- `03-data-warehouse/` - SQL homework for data warehouse design and analysis.
+- `04-analytics-engineering/` - dbt project with staging, core models, seeds, macros, and tests.
+- `05-batch/` - Spark batch examples and notebooks.
+- `06-streaming/` - PyFlink streaming jobs, Kafka producers, and Docker setup.
+- `07-project/` - Google Cloud infrastructure, Terraform scripts, scheduling helpers, and raw data assets.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Key components
 
-## Add your files
+### 01_docker_teeraform
+- `Dockerfile` for containerized ingestion.
+- `data_ingestion.ipynb` for pipeline demonstration.
+- SQL analysis files: `count_trips_by_distance.sql`, `largest_tip.sql`, `top_3_pickup_zones.sql`.
+- Sample lookup data under `ny_taxi_postgres_data/`.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### 02-workflow-orchestration
+- `docker-compose.yaml` for local orchestration.
+- `flows/` contains workflow definitions for GCP and taxi pipelines.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/jun01ee/data-engineering-zoomcamp.git
-git branch -M main
-git push -uf origin main
-```
+### 03-data-warehouse
+- `homework.sql` with warehouse-focused ETL and analytics exercises.
 
-## Integrate with your tools
+### 04-analytics-engineering
+- `ny-taxi-dbt/` contains a dbt analytics project.
+- Staging and core models, seeds, macros, snapshots, and tests.
 
-- [ ] [Set up project integrations](https://gitlab.com/jun01ee/data-engineering-zoomcamp/-/settings/integrations)
+### 05-batch
+- `Spark_in_Colab.ipynb` for Spark batch processing examples.
 
-## Collaborate with your team
+### 06-streaming
+- `pyflink/` contains streaming job code and producer scripts.
+- `docker-compose.yml` and `Dockerfile.flink` support local development.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 07-project
+- Terraform scripts for Google Cloud infrastructure.
+- `gcloud_scheduling.sh` and `gcloud_submit.sh` for deployment and scheduling.
+- Raw dataset examples and ingestion script in `scripts/`.
 
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+#### Project workflow
+[![Project workflow](07-project/project_workflow.png)](07-project/README.md)
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- Keep new scripts and notebooks within the appropriate module folder.
+- Add documentation when introducing new workflows or architecture.
+- Use clear commit messages and descriptive branch names.
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+No license file is included in this repository. Confirm reuse permissions with the project owner before sharing or redistributing code.
+## Getting started
+
+### Prerequisites
+- Docker
+- Docker Compose
+- Python 3.10+ (or compatible environment)
+- dbt Core
+- Terraform
+- Google Cloud SDK
+
+### Quick start
+
+```bash
+git clone <repo-url>
+cd data-engineering-zoomcamp
+```
+
+Then open the module you want to work with:
+- dbt: `cd 04-analytics-engineering/ny-taxi-dbt`
+- streaming: `cd 06-streaming/pyflink`
+- project infrastructure: `cd 07-project`
+
+### Example dbt commands
+
+```bash
+cd 04-analytics-engineering/ny-taxi-dbt
+dbt debug
+dbt seed
+dbt run
+dbt test
+```
+
+### Example streaming commands
+
+```bash
+cd 06-streaming/pyflink
+docker compose up -d
+```
+
+## Notes
+
+- This repository is primarily a learning and lab environment with stan

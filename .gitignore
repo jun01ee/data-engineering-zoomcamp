@@ -1,29 +1,39 @@
-# Compiled files
-*.tfstate
-*.tfstate.backup
-*.tfstate.lock.info
+# Jupyter checkpoint files
+.ipynb_checkpoints/
 
-# logs
-*.log
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Directories
-.terraform/
-.vagrant/
+# Local Python virtual envs
+venv/
+.venv/
+env/
+.env/
 
-# SSH Keys
+# IDE/editor config
+.vscode/
+.idea/
+*.iml
+
+# Local test / coverage artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Node/npm artifacts (if used)
+node_modules/
+
+# Additional secret/key folders
+06-streaming/pyflink/keys/
+07-project/keys/
 *.pem
 
-# Backup files
-*.bak
-
-# Ignored Terraform files
-*gitignore*.tf
-
-# Ignore Mac .DS_Store files
-.DS_Store
-
-# Ignored vscode files
-.vscode/
-
-.jar
-.json
+# Local project files and large artifacts
+.serena/
+01_docker_teeraform/ny_taxi_postgres_data/taxi_zone_lookup.csv
+01_docker_teeraform/ny_taxi_postgres_data/green_tripdata_2019-10.csv.gz
+06-streaming/pyflink/green_tripdata_2019-10.csv
+07-project/jars/
+07-project/.terraform/
